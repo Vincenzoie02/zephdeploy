@@ -1,0 +1,58 @@
+{
+    "name": "Raganork MD",
+    "description": "multi device based WhatsApp Public/User bot.",
+    "logo": "https://www.linkpicture.com/q/rgnk.jpg",
+    "keywords": ["WhatsApp", "Userbot", "Raganork", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/souravkl11/Raganork",
+    "website":   "https://bit.ly/Raganork",
+    "success_url": "https://bit.ly/Raganork",
+    "stack": "container",
+    "env": {
+        "USERNAME": {
+            "description": "Username of md account",
+            "required": true
+        },
+        "HANDLERS": {
+            "description": "Prefix of commands. Can be also false",
+            "required": true,
+            "value":"^[.,]"
+        },
+       "HEROKU_API_KEY": {
+            "description": "For updating bot and setting vars remotely",
+            "required": true,
+            "value":""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        },
+        "STICKER_DATA": {
+            "description": "Name of stickers (take)",
+            "required": true,
+            "value":"ʀᴀɢᷨᴀͦɴͭᴏʀᴋ"
+        },
+        "AUDIO_DATA": {
+            "description": "Name of audio (take)",
+            "required": true,
+            "value":"private"
+        },
+        "MODE": {
+            "description": "Private or public",
+            "required": true,
+            "value":"private"
+        },
+       
+        "PASSWORD": {
+            "description": "Password of md account",
+            "required": true
+             
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
